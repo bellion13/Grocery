@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center py-3 bg-green-200 shadow-md fixed w-full top-0 z-10">
+      <div className="flex justify-between items-center py-3 bg-green-100 shadow-xl fixed w-full top-0 z-10">
         <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img src={Logo} alt="logo" className="md:w-52 w-40" />
@@ -59,9 +59,11 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <ShoppingCart className="text-xl cursor-pointer" />
+            <div className="flex items-center relative md:ml-0 ml-4 hover:text-green-700 cursor-pointer">
+              <ShoppingCart className="text-xl "/>
+              <span className="flex justify-center items-center text-sm absolute -top-1 -right-2 bg-green-600 text-white rounded-full w-5 h-5 ">0</span>
+            </div>
           </nav>
-
         </div>
       </div>
     </>

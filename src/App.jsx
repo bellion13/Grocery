@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Header />
-        <div className="pt-20">
+        <div className="pt-[64px]">
           <Router />
         </div>
         
