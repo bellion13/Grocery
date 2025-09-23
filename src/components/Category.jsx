@@ -44,13 +44,13 @@ const Category = () => {
 
   return (
     <div className='max-w-7xl mx-auto'>
-      <h2 className='text-4xl font-bold text-center py-8'>Shop by Category</h2>
+      <h2 className='text-3xl font-bold text-center py-8'>Shop by Category</h2>
       <div className='grid md:grid-cols-6 grid-cols-1 gap-6 px-4 md:px-0 pb-8'>
         {categories.map(category => (
           <div key={category.id} onClick={() => navigate(`/shop`)} className='overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300'>
             <img src={category.image} alt={category.name} className='w-full h-48 object-cover bg-green-100 border border-green-300 rounded-lg'/>
             <div className='p-4'>
-              <h3 className='text-lg font-semibold text-center '>{category.name}</h3>
+              <h3 className=' text-base font-semibold text-center '>{category.name}</h3>
             </div>
           </div>
         ))}
