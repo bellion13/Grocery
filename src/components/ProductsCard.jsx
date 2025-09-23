@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const ProductsCard = ({ product }) => {
+    const navigate = useNavigate()
     return (
         <div className='text-sm border border-green-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col h-full'>
-            <div className='flex-1'>
+            <div onClick={() => navigate(`/shop`)} className='flex-1'>
                 <img src={product.image} alt={product.name} className='w-full h-48 object-cover border-b border-green-300' />
                 <div className='p-4 flex-1'>
                     <p className='text-gray-600 text-xs'>{product.category}</p>
