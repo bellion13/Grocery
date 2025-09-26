@@ -1,16 +1,12 @@
 import React from 'react'
-
 import { useSelector, useDispatch } from 'react-redux'
 import { removeItem, updateQuantity, clearCart } from '../Redux-toolkit/CartSlice'
 import { X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
-
 const Cart = () => {
-
   const dispatch = useDispatch()
-  const { items, totalQuantity, totalAmount } = useSelector(state => state.cart)
-  
+  const { items, totalQuantity, totalAmount } = useSelector(state => state.cart) 
   const handleRemoveItem = (id) => {
     const item = items.find(item => item.id === id)
     dispatch(removeItem(id))
@@ -18,8 +14,7 @@ const Cart = () => {
       position: "top-right",
       autoClose: 2000,
     })
-  }
-  
+  } 
   const handleUpdateQuantity = (id, quantity) => {
     if (quantity <= 0) {
       dispatch(removeItem(id))

@@ -1,18 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addItem } from '../Redux-toolkit/CartSlice'
 import { toast } from 'react-toastify'
-
-
 const ProductsCard = ({ product }) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-        const cartItems = useSelector(state => state.cart.items)
-
-
+    const cartItems = useSelector(state => state.cart.items)
     const isInCart = cartItems.some(item => item.id === product.id)
-
     const handleAddToCart = (e) => {
         e.stopPropagation() // Prevent navigation when clicking Add to Cart button
         if (!isInCart) {
@@ -49,8 +44,7 @@ const ProductsCard = ({ product }) => {
                 </div>
             </div>
             <div className='p-4 pt-0 '>
-                <button 
-                
+                <button
                     onClick={handleAddToCart}
                     className='cursor-pointer w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200'
                 >

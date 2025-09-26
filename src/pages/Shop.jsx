@@ -2,32 +2,25 @@ import React from 'react'
 import { useState, useMemo } from 'react'
 import ProductsCard from '../components/ProductsCard'
 import { products } from '../Utils/Data'
-
 const Shop = () => {
-
   const [range, setRange] = useState([0, 500])
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('')
   const uniqueCategories = [...new Set(products.map(product => product.category))];
-
-
   // Filter products based on all criteria
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
       const matchesPrice = product.price >= range[0] && product.price <= range[1]
       const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase())
       const matchesCategory = category === '' || product.category === category
-
       return matchesPrice && matchesSearch && matchesCategory
     })
   }, [range, search, category])
-
   const resetFilters = () => {
     setRange([0, 500])
     setSearch('')
     setCategory('')
   }
-
   return (
     <>
       <div className='max-w-7xl mx-auto flex flex-col my-16 '>

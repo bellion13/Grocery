@@ -1,9 +1,7 @@
 import React from 'react'
 import FreshMart from '../assets/FreshMart.jpg'
 import { Heart, Leaf, ShoppingBag, Truck } from 'lucide-react'
-
 const About = () => {
-
   return (
     <div className='max-w-7xl mx-auto pt-12'>
       <div className='text-center mb-8'>

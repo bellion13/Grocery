@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 const Contact = () => {
-
   return (
     <div className='bg-green-50 '>
       <div className='max-w-7xl mx-auto '>
