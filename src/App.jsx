@@ -8,13 +8,16 @@ import 'react-toastify/dist/ReactToastify.css'
 import Header from "./components/Header";
 import Router from "./Router/Router.jsx";
 import Footer from "./components/Footer.jsx";
-import ScrollToTop from "./components/ScrollTop.jsx";
+import ScrollTop from "./components/ScrollTop.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
+        <ScrollTop />
         <ScrollToTop />
+        
         <Header />
         <div className="pt-[64px]">
           <Router />

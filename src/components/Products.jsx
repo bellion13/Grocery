@@ -6,8 +6,8 @@ const Products = () => {
     const navigate = useNavigate()
     return (
         <div className='max-w-7xl mx-auto'>
-            <h2 className='text-3xl font-bold py-6'>Featured Products</h2>
-            <div className='grid md:grid-cols-5 grid-cols-1 gap-6 px-4 md:p-4 pb-8'>
+            <h2 className='md:text-3xl font-bold py-6 text-2xl'>Featured Products</h2>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 px-4 lg:px-0 pb-8'>
                 {
                     products.slice(0, 5).map((product) => {
                         return <ProductsCard key={product.id} product={product} />

@@ -44,8 +44,8 @@ const Category = () => {
 
   return (
     <div className='max-w-7xl mx-auto'>
-      <h2 className='text-3xl font-bold text-center py-8'>Shop by Category</h2>
-      <div className='grid md:grid-cols-6 grid-cols-1 gap-6 px-4 md:px-0 pb-8'>
+      <h2 className='text-2xl md:text-3xl font-bold text-center py-6 sm:py-8 px-4'>Shop by Category</h2>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 px-4 lg:px-0 pb-8'>
         {categories.map(category => (
           <div key={category.id} onClick={() => navigate(`/shop`)} className='overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300'>
             <img src={category.image} alt={category.name} className='w-full h-48 object-cover bg-green-100 border border-green-300 rounded-lg'/>
