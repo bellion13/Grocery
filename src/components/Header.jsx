@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 import { ShoppingCart, Menu, X } from 'lucide-react';
 
 const Header = () => {
