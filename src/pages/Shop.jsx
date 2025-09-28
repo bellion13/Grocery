@@ -202,7 +202,7 @@ const Shop = () => {
               ) : (
                 <div className='col-span-full'>
                   <div className='text-center py-16'>
-                    <div className='bg-white rounded-lg p-8 max-w-md mx-auto shadow-sm border'>
+                    <div className='bg-white  p-8 max-w-md mx-auto'>
                       <div className='text-6xl mb-4'>🔍</div>
                       <h3 className='text-xl font-semibold text-gray-600 mb-2'>No products found</h3>
                       <p className='text-gray-500 mb-6'>
@@ -210,7 +210,7 @@ const Shop = () => {
                       </p>
                       <button
                         onClick={resetFilters}
-                        className='bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium'
+                        className='bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium cursor-pointer'
                       >
                         Reset All Filters
                       </button>
